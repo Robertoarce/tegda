@@ -1,5 +1,5 @@
 =============
-titorium EGDA
+TEGDA - inTuitive Exploratory Graphic Data Analysis
 =============
 
 
@@ -20,7 +20,7 @@ titorium EGDA
 
 
 
-Tegda creates customizable visual representations of data for exploratory analysis.
+Tegda creates an easy customizable visual representations of data for exploratory analysis.
 
 
 * Free software: MIT license
@@ -30,7 +30,7 @@ Tegda creates customizable visual representations of data for exploratory analys
 Features
 --------
 
-* TODO
+* Use several visualization
 
 Credits
 -------
