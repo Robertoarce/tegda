@@ -1,5 +1,5 @@
 =============
-titorium EGDA
+Terrific EGDA
 =============
 
 
