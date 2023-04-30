@@ -2,10 +2,10 @@
 
 __author__ = """Roberto Arce Aguirre"""
 __email__ = 'roberto_arce_@hotmail.com'
-#__version__ = '0.1.1'
+#__version__ = '0.1.2'
 
 # Functions
-from utils import create_fake_dataset # noqa : F401
+from .utils import create_fake_dataset # noqa : F401
 
 # Modules
 from . import time_series  # noqa : F401

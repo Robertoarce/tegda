@@ -1,6 +1,4 @@
 #This file is for all non-core functions
-import pandas as pd
-import numpy as np
 
 """ Basic utility functions """
 
