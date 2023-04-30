@@ -2,7 +2,13 @@
 
 __author__ = """Roberto Arce Aguirre"""
 __email__ = 'roberto_arce_@hotmail.com'
-#__version__ = '0.1.2'
+
+#imports
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import plotly.graph_objs as go
+import matplotlib as plt
 
 # Functions
 from .utils import create_fake_dataset # noqa : F401
