@@ -2,7 +2,10 @@
 
 """ Basic utility functions """
 
-def create_fake_dataset(period = 365, frequency = 'D') -> pd.Dataframe:
+import pandas as pd
+import numpy as np
+
+def create_fake_dataset(period = 365, frequency = 'D') -> pd.DataFrame:
     """
     Creates a fake data set for testing purposes.
     

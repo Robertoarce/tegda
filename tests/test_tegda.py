@@ -6,7 +6,7 @@ import pytest
 
 from click.testing import CliRunner
 
-from tegda import tegda
+from tegda import tegdas
 from tegda import cli
 
 
