@@ -1,5 +1,5 @@
 =============
-Terrific EGDA
+Terrific!  Exploratory Graphical Data Analysis (TEGDA)
 =============
 
 
