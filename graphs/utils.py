@@ -31,8 +31,17 @@ def create_fake_dataset(period = 365, frequency = 'D') -> pd.DataFrame:
     business_size = np.random.choice(['Small', 'Medium', 'Large'], size=( period,))
 
     # create some random data
-    sales_volume = np.random.randint(0, 100, size=(period,))
-
+    error =  np.random.randint(0, 100, size=(period,))
+    bias = np.random.randint(0, 100, size=(period,))
+    var_1 = np.random.randint(1, 10000, size=(period,))
+    var_2 = np.random.randint(1, 1000, size=(period,))
+    var_3 = np.random.randint(1, 1000, size=(period,))
+    
+    sales_volume =  bias + var_1 + var_2 * (var_3 **(1/3)) + error
+    
+    
+    
+    
     # create the dataframe
     df = pd.DataFrame({'Time': time_index, 'Sector': sector, 'Zone': zone, 'Business_Size': business_size, 'Sales_Volume': sales_volume})
 
