@@ -57,10 +57,12 @@ def classify_cols(df) -> pd.DataFrame:
 
     time_vars = [
         col for col in df.columns if pd.api.types.is_datetime64_any_dtype(df[col])]
+    len_time = [df[col].nunique() for col in time_vars]
 
     # we will capture those of type *object*
     cat_vars = [var for var in df.columns if df[var].dtype ==
                 'O' and var not in time_vars]
+    len_cat = [df[col].nunique() for col in cat_vars]
 
     # cast all variables as categorical
     df[cat_vars] = df[cat_vars].astype('O')
@@ -68,4 +70,9 @@ def classify_cols(df) -> pd.DataFrame:
     # now let's identify the numerical variables
     num_vars = [var for var in df.columns if (
         var not in cat_vars and var not in time_vars)]
-    return {'time': time_vars, 'categorical': cat_vars, 'numeric': num_vars}
+    len_num = [df[col].nunique() for col in num_vars]
+
+    return {'time': [time_vars, len_time],
+            'categorical': [cat_vars, len_cat],
+            'numeric': [num_vars, len_num]
+            }
