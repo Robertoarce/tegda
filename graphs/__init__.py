@@ -13,9 +13,15 @@ from . import correlation  # noqa : F401
 from . import ranking  # noqa : F401
 
 # Functions
-from .utils import create_fake_dataset  # noqa : F401
+from tegda.graphs.utils import create_fake_dataset, classify_cols   # noqa : F401
+
+from .Target import *
 
 
 class showcase:
-    def __init__(self, df1):
+
+    def __init__(self, df1, target):
         self.df = df1
+        self.target = target
+
+        classify = classify_cols(df1)

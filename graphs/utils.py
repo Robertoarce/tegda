@@ -76,3 +76,7 @@ def classify_cols(df) -> pd.DataFrame:
             'categorical': [cat_vars, len_cat],
             'numeric': [num_vars, len_num]
             }
+
+
+def rename_calls(df) -> pd.DataFrame:
+    return df.columns, df.rename(columns=dict(zip(df.columns, df.columns.str.lower())))
